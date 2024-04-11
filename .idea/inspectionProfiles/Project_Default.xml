@@ -1,0 +1,44 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W391" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N803" />
+          <option value="N801" />
+          <option value="N806" />
+          <option value="N812" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tuple.select_by_visible_text" />
+          <option value="venv.xxx.JavascriptExecutor.*" />
+          <option value="str.text" />
+          <option value="bytes.presence_of_element_located" />
+          <option value="openpyxl.workbook.active" />
+          <option value="tuple.text" />
+          <option value="str.click" />
+          <option value="bool.is_enabled" />
+          <option value="str.isdisabled" />
+          <option value="bytes.element_to_be_clickable" />
+          <option value="tuple.select_by_value" />
+          <option value="tuple.select_by_text" />
+          <option value="str.is_displayed" />
+          <option value="pageObjects.CreatElectionPage.*" />
+          <option value="int.text" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
