@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC, wait
 
 
 class loginPage:
@@ -38,3 +40,19 @@ class loginPage:
     def click_Logout(self):
         self.driver.find_element(By.XPATH, self.logout_option_xpath).click()
         self.driver.find_element(By.XPATH, self.logout_icon_xpath).click()
+
+    @staticmethod
+    def wait_for_element_clickable(self, element_locator, timeout=10):
+        try:
+            wait = WebDriverWait(self.driver, timeout)
+            return wait.until(EC.element_to_be_clickable(element_locator))
+        except Exception as e:
+            print(f" Error : {str(e)}")
+
+    @staticmethod
+    def wait_presence_of_element_located(self, element, timeout=10):
+        try:
+            wait = WebDriverWait(self.driver, timeout)
+            return wait.until(EC.presence_of_element_located(element))
+        except Exception as e:
+            print(f" Error : {str(e)}")
