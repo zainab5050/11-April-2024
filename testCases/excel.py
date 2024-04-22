@@ -11,7 +11,7 @@ from utilities import xl_util
 class Test_002_xlLogin:
     baseURL = Readconfig.getApplicationURL()
     path = ".//testData/Book1.xlsx"
-    logger = LogGen.loggen()
+    logger = loggen()
 
     def test_browse_xl_login(self, setup):
         self.driver = setup

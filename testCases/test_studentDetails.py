@@ -2,11 +2,10 @@ import time
 import pytest
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
-
 from PageObjects.login_page import loginPage
 from PageObjects.student_Info_menu_page import student_Info
 from utilities.readProperties import Readconfig
-from utilities.customLogger import LogGen
+from utilities.customLogger import loggen
 
 
 class ActionChain:
@@ -26,6 +25,9 @@ class Test_002_student_Details:
     bulk_delete_menu_xpath = "Bulk Delete"
     select_all_xpath = "//input[@name='checkAll']"
     delete_button_xpath = "//button[@id='load']"
+
+    logger = loggen()
+
     @pytest.fixture()
     def test_login(self, setup):
         driver = setup
@@ -79,6 +81,7 @@ class Test_002_student_Details:
 
     def test_bulk_delete(self, setup, test_login):
         driver = setup
+        self.logger.info("********* test_bulk_delete_tetsing Start **********")
         student_Info.obj = student_Info(driver)
         student_Info.obj.clickStuInfo_menu()
         time.sleep(3)
@@ -95,5 +98,4 @@ class Test_002_student_Details:
         alert.accept()
         student_Info.obj.click_DF(self.select_all_xpath)
         student_Info.obj.click_DF(self.delete_button_xpath)
-
-
+        self.logger.info("********* test_bulk_delete_tetsing End **********")
